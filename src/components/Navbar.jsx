@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { HiOutlineMenuAlt2 } from "react-icons/hi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineClose } from "react-icons/md";
 import logo from "../assets/logo.jpg"; // Replace with your actual logo path
 import img1 from "../assets/facebook.png";
@@ -56,7 +56,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <HiOutlineMenuAlt2
+        <GiHamburgerMenu
           className="text-3xl lg:hidden cursor-pointer"
           onClick={toggleSidebar}
         />
@@ -66,7 +66,7 @@ const Navbar = () => {
           <div className="fixed top-0 left-0 w-[300px] h-full bg-white shadow-lg z-50 flex flex-col">
             {/* Logo and Close Button */}
             <div className="flex justify-between items-center px-6 py-4">
-              <img src={logo} alt="Bela Farmhouse & Eatery Logo" className="h-[50px] w-[50px]" />
+              <img src={logo} alt="Bela Farmhouse & Eatery Logo" className="h-[65px] w-[60px] bg-red-500" />
               <MdOutlineClose className="text-2xl cursor-pointer" onClick={toggleSidebar} />
             </div>
 
