@@ -1,6 +1,7 @@
 
 import React, { useEffect } from "react";
 import Navbar from '../components/Navbar'
+import Slider from "../components/Slider";
 
 const Home = () => {
   useEffect(() => {
@@ -10,6 +11,7 @@ const Home = () => {
   return (
     <div className='overflow-x-hidden'>
       <Navbar/>
+      <Slider/>
    
    
     </div>
