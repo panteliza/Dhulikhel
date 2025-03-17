@@ -58,7 +58,7 @@ export default function Slider() {
               <img
                 src={image.src}
                 alt={image.alt}
-                className={`w-full h-[300px] sm:h-[620px] md:h-[640px] 2xl:h-[900px] object-cover object-center transition-opacity duration-700 ease-in-out ${
+                className={`w-full h-[450px] sm:h-[670px] md:h-[680px] 2xl:h-[900px] object-cover object-center transition-opacity duration-700 ease-in-out ${
                   loaded[index] ? "opacity-100" : "opacity-0"
                 }`}
                 onLoad={() => handleImageLoad(index)}
