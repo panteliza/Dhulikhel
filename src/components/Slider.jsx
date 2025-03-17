@@ -17,13 +17,13 @@ import hotel1 from "../assets/c.jpeg";
 
 
 const images = [
-  { src: consultancy5, alt: "hotel4" },
+  { src: consultancy6, alt: "hotel4" },
   { src: consultancy1, alt: "hotel1" },
   { src: consultancy2, alt: "hotel2" },
   { src: consultancy3, alt: "hotel3" },
   { src: consultancy4, alt: "hotel4" },
- 
-  { src: consultancy6, alt: "hotel4" },
+  { src: consultancy5, alt: "hotel4" },
+  
   { src: hotel1, alt: "Luxury Hotel Lobby" },
  
 ];
@@ -63,7 +63,7 @@ export default function Slider() {
               <img
                 src={image.src}
                 alt={image.alt}
-                className={`w-full h-[300px] sm:h-[620px] md:h-[640px] 2xl:h-[900px] object-cover object-center transition-opacity duration-700 ease-in-out ${
+                className={`w-full h-[400px] sm:h-[620px] md:h-[640px] 2xl:h-[900px] object-cover object-center transition-opacity duration-700 ease-in-out ${
                   loaded[index] ? "opacity-100" : "opacity-0"
                 }`}
                 onLoad={() => handleImageLoad(index)}
