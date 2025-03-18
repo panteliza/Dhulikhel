@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import bgImage from "../assets/61.jpeg";
+import bgImage from "../assets/d13.jpg";
 
 const DirectContactUs = () => {
   const [messageSent, setMessageSent] = useState(false);
