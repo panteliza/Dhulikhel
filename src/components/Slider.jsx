@@ -17,12 +17,13 @@ import hotel1 from "../assets/53.jpeg";
 
 
 const images = [
+  { src: consultancy5, alt: "hotel4" },
   { src: consultancy6, alt: "hotel4" },
   { src: consultancy1, alt: "hotel1" },
   { src: consultancy2, alt: "hotel2" },
   { src: consultancy3, alt: "hotel3" },
   { src: consultancy4, alt: "hotel4" },
-  { src: consultancy5, alt: "hotel4" },
+
   
   { src: hotel1, alt: "Luxury Hotel Lobby" },
  
