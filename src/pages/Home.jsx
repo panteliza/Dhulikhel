@@ -7,6 +7,7 @@ import DirectContactUs from "../components/DirectContactUs";
 import ServicesSection from "../components/Services";
 import SpaGallery from "../components/SpaGallery";
 import Gallery from "../components/Gallery";
+import About from "../components/About";
 
 const Home = () => {
   useEffect(() => {
@@ -17,7 +18,7 @@ const Home = () => {
     <div className='overflow-x-hidden'>
       <Navbar/>
       <Slider/>
-      
+      <About/>
       <ServicesSection/>
       <FoodSection/>
       
