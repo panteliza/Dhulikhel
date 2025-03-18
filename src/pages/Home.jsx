@@ -2,6 +2,9 @@
 import React, { useEffect } from "react";
 import Navbar from '../components/Navbar'
 import Slider from "../components/Slider";
+import FoodSection from "../components/FoodSection";
+import DirectContactUs from "../components/DirectContactUs";
+import ServicesSection from "../components/Services";
 
 const Home = () => {
   useEffect(() => {
@@ -12,6 +15,9 @@ const Home = () => {
     <div className='overflow-x-hidden'>
       <Navbar/>
       <Slider/>
+      <FoodSection/>
+      <ServicesSection/>
+      <DirectContactUs/>
    
    
     </div>
