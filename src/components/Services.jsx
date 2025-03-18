@@ -4,9 +4,9 @@ import { FaSpa, FaHiking, FaHotel } from "react-icons/fa";
 import { GiMountainCave, GiGreekTemple } from "react-icons/gi";
 
 import spaImg from "../assets/56.jpeg";
-import hikingImg from "../assets/62.jpeg";
-import trekkingImg from "../assets/61.jpeg";
-import oldTownImg from "../assets/63.jpeg";
+import hikingImg from "../assets/hiking.jpg";
+import trekkingImg from "../assets/trekking.jpg";
+import oldTownImg from "../assets/cultural.jpg";
 import deluxeRoomImg from "../assets/64.jpeg";
 
 const experiences = [
