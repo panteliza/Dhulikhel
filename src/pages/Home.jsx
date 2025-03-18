@@ -5,6 +5,7 @@ import Slider from "../components/Slider";
 import FoodSection from "../components/FoodSection";
 import DirectContactUs from "../components/DirectContactUs";
 import ServicesSection from "../components/Services";
+import SpaGallery from "../components/SpaGallery";
 
 const Home = () => {
   useEffect(() => {
@@ -18,6 +19,7 @@ const Home = () => {
       <FoodSection/>
       <ServicesSection/>
       <DirectContactUs/>
+      <SpaGallery/>
    
    
     </div>
