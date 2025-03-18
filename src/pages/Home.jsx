@@ -17,11 +17,13 @@ const Home = () => {
     <div className='overflow-x-hidden'>
       <Navbar/>
       <Slider/>
-      <FoodSection/>
+      
       <ServicesSection/>
-      <DirectContactUs/>
+      <FoodSection/>
+      
       <SpaGallery/>
       <Gallery/>
+      <DirectContactUs/>
    
    
     </div>
