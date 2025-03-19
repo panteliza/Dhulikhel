@@ -27,12 +27,12 @@ const Home = () => {
       <About/>
       <ServicesSection/>
       <FoodSection/>
-      
       <SpaGallery/>
       <RoomTypesComponent/>
      <Reviews/>
-      <Gallery/>
+      
 <HotelFacilitiesComponent/>
+<Gallery/>
       <DirectContactUs/>
       <Contact/>
       <FAQComponent/>
