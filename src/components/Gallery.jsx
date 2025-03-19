@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Static Image Imports
 import D1 from "../assets/d1.jpg";
@@ -19,7 +20,6 @@ import D14 from "../assets/d14.jpg";
 import D15 from "../assets/d15.jpg";
 import D16 from "../assets/d16.jpg";
 import D17 from "../assets/d17.jpg";
-
 import D19 from "../assets/d19.jpg";
 
 // Image Array
@@ -89,6 +89,15 @@ const Gallery = () => {
           </motion.div>
         ))}
       </motion.div>
+
+      <div className="flex justify-center mt-12">
+        <Link
+          to="/gallery"
+          className="inline-block bg-blue-600 text-white text-sm font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 transition"
+        >
+          View More from Gallery
+        </Link>
+      </div>
     </div>
   );
 };

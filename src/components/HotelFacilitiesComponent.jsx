@@ -103,7 +103,7 @@ const HotelFacilitiesComponent = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        ✨ Facilities of Dhulikhel Boutique Hotel
+         Facilities of Dhulikhel Boutique Hotel
       </motion.h2>
 
       <motion.div

@@ -12,6 +12,7 @@ import Reviews from "../components/Reviews";
 import RoomTypesComponent from "../components/RoomTypesComponent";
 import HotelFacilitiesComponent from "../components/HotelFacilitiesComponent";
 import Contact from "../components/HotelMap";
+import FAQComponent from "../components/FAQ";
 
 const Home = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const Home = () => {
 <HotelFacilitiesComponent/>
       <DirectContactUs/>
       <Contact/>
+      <FAQComponent/>
    
    
     </div>
