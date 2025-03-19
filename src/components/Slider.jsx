@@ -44,12 +44,12 @@ export default function Slider() {
     <div className="w-full relative z-[0] bg-gray-100">
       <Swiper
         autoplay={{
-          delay: 3500,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         effect="fade"
         fadeEffect={{ crossFade: true }}
-        speed={1200}
+        speed={1000}
         modules={[Autoplay, EffectFade]}
         className="swiper-container"
       >

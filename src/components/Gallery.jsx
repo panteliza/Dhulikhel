@@ -29,46 +29,52 @@ const images = [
   D14, D15, D16, D17, D19,
 ];
 
+// Animation Variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, scale: 0.9, y: 40 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+  hover: {
+    scale: 1.05,
+    transition: { duration: 0.3 },
+  },
+};
+
 const Gallery = () => {
-  // Animation Variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const imageVariants = {
-    hidden: { opacity: 0, scale: 0.95, y: -30 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
-    hover: {
-      scale: 1.03,
-      transition: { duration: 0.3 },
-    },
-  };
-
   return (
     <div className="container mx-auto px-4 py-10">
-      <h1 className="text-secondary text-4xl font-bold text-center mb-10">
+      <motion.h1
+        className="text-secondary text-4xl font-bold text-center mb-10"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         Some Glimpses
-      </h1>
+      </motion.h1>
 
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        variants={containerVariants}
         initial="hidden"
         animate="visible"
-        variants={containerVariants}
       >
         {images.map((img, index) => (
           <motion.div
@@ -90,14 +96,19 @@ const Gallery = () => {
         ))}
       </motion.div>
 
-      <div className="flex justify-center mt-12">
+      <motion.div
+        className="flex justify-center mt-12"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+      >
         <Link
           to="/gallery"
           className="inline-block bg-blue-600 text-white text-sm font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 transition"
         >
           View More from Gallery
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 };
