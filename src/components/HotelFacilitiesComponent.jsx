@@ -1,11 +1,16 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   Wifi, Bus, Ban, BedDouble, GlassWater, Soup, Utensils,
   ParkingCircle, Sparkles
 } from "lucide-react";
 
 const HotelFacilitiesComponent = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   const mostPopularFacilities = [
     { icon: <Wifi className="w-5 h-5 text-blue-600" />, name: "Free WiFi" },
     { icon: <Bus className="w-5 h-5 text-blue-600" />, name: "Airport shuttle" },
@@ -97,46 +102,34 @@ const HotelFacilitiesComponent = () => {
 
   return (
     <div className="px-6 pt-12 pb-6 max-w-screen-xl mx-auto bg-gradient-to-b from-[#fffaf3] to-[#f3f0e9]">
-      <motion.h2
+      <h2
         className="text-4xl font-bold text-center mb-10 text-[#1e293b] tracking-tight"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        data-aos="fade-up"
       >
-         Facilities of Dhulikhel Boutique Hotel
-      </motion.h2>
+        Facilities of Dhulikhel Boutique Hotel
+      </h2>
 
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8"
-        initial="hidden"
-        animate="visible"
-      >
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
         {mostPopularFacilities.map((facility, index) => (
-          <motion.div
+          <div
             key={index}
             className="flex items-center gap-3 p-4 border border-gray-200 bg-gradient-to-br from-[#fff8ef] to-[#e8dbc8] rounded-xl shadow-md hover:shadow-lg transition-transform hover:scale-105 duration-300"
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ delay: index * 0.1, duration: 0.4, type: "spring" }}
+            data-aos="fade-up"
+            data-aos-delay={`${index * 100}`}
           >
             {facility.icon}
             <span className="text-base font-medium text-[#3f3f3f]">{facility.name}</span>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
 
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-        initial="hidden"
-        animate="visible"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {facilitySections.map((section, idx) => (
-          <motion.div
+          <div
             key={idx}
             className="bg-gradient-to-br from-[#fffaf1] to-[#e6d7c4] border border-gray-300 rounded-2xl p-5 shadow-md hover:shadow-xl transition-all hover:scale-[1.02] duration-300 hover:border-[#a9784a]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: idx * 0.1, duration: 0.5 }}
+            data-aos="fade-up"
+            data-aos-delay={`${idx * 100}`}
           >
             <h3 className="text-xl font-semibold mb-2 text-[#3e2e1f]">{section.title}</h3>
             <ul className="list-disc list-inside text-sm text-[#4f463d] space-y-1">
@@ -144,9 +137,9 @@ const HotelFacilitiesComponent = () => {
                 <li key={i}>{item}</li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };
