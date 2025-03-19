@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage';
 import GalleryPage from './pages/GalleryPage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
+import DeluxeTwinRoomPage from './pages/DeluxeTwinRoomPage';
 const App = () => {
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/deluxe-twin-room" element={<DeluxeTwinRoomPage />} />
           </Routes>
  {/* WhatsApp button as an image */}
         <a

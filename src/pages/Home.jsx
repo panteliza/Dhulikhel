@@ -8,6 +8,10 @@ import ServicesSection from "../components/Services";
 import SpaGallery from "../components/SpaGallery";
 import Gallery from "../components/Gallery";
 import About from "../components/About";
+import Reviews from "../components/Reviews";
+import RoomTypesComponent from "../components/RoomTypesComponent";
+import HotelFacilitiesComponent from "../components/HotelFacilitiesComponent";
+import Contact from "../components/HotelMap";
 
 const Home = () => {
   useEffect(() => {
@@ -23,8 +27,12 @@ const Home = () => {
       <FoodSection/>
       
       <SpaGallery/>
+      <RoomTypesComponent/>
+     <Reviews/>
       <Gallery/>
+<HotelFacilitiesComponent/>
       <DirectContactUs/>
+      <Contact/>
    
    
     </div>
