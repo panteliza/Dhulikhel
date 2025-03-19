@@ -52,7 +52,7 @@ const spaPackages = [
 const SpaGallery = () => {
   return (
     <div className="p-6 bg-white min-h-screen">
-      <h1 className="text-4xl font-bold text-center mb-10 animate-pulse">Our Spa Experience</h1>
+      <h1 className="text-4xl font-bold text-center mb-10 ">Our Spa Experience</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {spaPackages.map((spa, index) => {
           const isEven = index % 2 === 0;

@@ -7,7 +7,7 @@ import "swiper/css/effect-fade";
 // Consultancy Images
 import consultancy6 from "../assets/1.jpeg";
 import consultancy5 from "../assets/d9.jpg";
-import consultancy1 from "../assets/a.jpeg";
+import consultancy1 from "../assets/66.jpeg";
 import consultancy2 from "../assets/b.jpeg";
 import consultancy3 from "../assets/28.jpeg";
 import consultancy4 from "../assets/29.jpeg";
