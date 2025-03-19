@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Location */}
           <div className="flex flex-col items-center font-bold">
             <MapPin className="w-6 h-6 mb-2 text-white" />
-            <div>
+            <div className="flex flex-col items-center ">
               <p><strong>Dhulikhel, Nepal</strong></p>
               <p>30km from Kathmandu, on the way to Sindhupalchok</p>
               <p>Postal Code: 45200</p>
