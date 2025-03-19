@@ -43,10 +43,10 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="flex gap-4">
-          <a href="https://www.facebook.com/share/16KovBxBWu/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/share/1RERXw4QkC/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
               <img src={img1} alt="Facebook Icon" className="h-[30px] w-[30px] object-contain" />
             </a>
-            <a href="https://www.instagram.com/belafarmhouseandeatery?igsh=MTJpdTJ1cWUzMnA4YQ==" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/dhulikhelboutiquehotel?igsh=MXkwN3Nic3E5aTBwNQ==" target="_blank" rel="noopener noreferrer">
               <img src={img2} alt="Instagram Icon" className="h-[30px] w-[30px] object-contain" />
             </a>
             <a href="https://wa.me/9779851096133" target="_blank" rel="noopener noreferrer">
@@ -86,10 +86,10 @@ const Navbar = () => {
 
             {/* Social Icons in Sidebar */}
             <div className="flex justify-center gap-4 mt-4 px-6">
-              <a href="https://www.facebook.com/share/16KovBxBWu/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/share/1RERXw4QkC/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
                 <img src={img1} alt="Facebook Icon" className="h-[30px] w-[30px] object-contain" />
               </a>
-              <a href="https://www.instagram.com/belafarmhouseandeatery?igsh=MTJpdTJ1cWUzMnA4YQ==" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/dhulikhelboutiquehotel?igsh=MXkwN3Nic3E5aTBwNQ==" target="_blank" rel="noopener noreferrer">
                 <img src={img2} alt="Instagram Icon" className="h-[30px] w-[30px] object-contain" />
               </a>
               <a href="https://wa.me/9779851096133" target="_blank" rel="noopener noreferrer">
