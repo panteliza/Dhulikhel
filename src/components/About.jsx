@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Img1 from "../assets/d1.jpg";
 import Img2 from "../assets/d2.jpg";
 import Img3 from "../assets/d12.jpg";
-import Background from "../assets/background.jpg";
+import Background from "../assets/bg45.png";
 
 const About = () => {
   return (
