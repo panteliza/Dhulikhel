@@ -13,6 +13,7 @@ import RoomTypesComponent from "../components/RoomTypesComponent";
 import HotelFacilitiesComponent from "../components/HotelFacilitiesComponent";
 import Contact from "../components/HotelMap";
 import FAQComponent from "../components/FAQ";
+import Footer from "../components/Footer";
 
 const Home = () => {
   useEffect(() => {
@@ -35,6 +36,7 @@ const Home = () => {
       <DirectContactUs/>
       <Contact/>
       <FAQComponent/>
+      <Footer/>
    
    
     </div>

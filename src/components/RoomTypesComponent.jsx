@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Users } from "lucide-react";
-import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const roomTypes = [
   {
@@ -45,73 +46,66 @@ const roomTypes = [
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 30, scale: 0.95 },
-  visible: index => ({
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      delay: index * 0.15,
-      type: "spring",
-      stiffness: 120,
-    },
-  })
-};
-
 const RoomTypesDisplay = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
-    <motion.div
-      className="px-6 py-12 max-w-screen-xl mx-auto bg-gradient-to-b from-green-50 to-blue-50"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-    >
-      <motion.h2
-        className="text-4xl font-bold text-center mb-12 tracking-tight text-[#1a202c]"
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+    <div style={{ padding: "3rem 1.5rem", maxWidth: "1280px", margin: "0 auto", background: "linear-gradient(to bottom, #f0fff4, #ebf8ff)" }}>
+      <h2
+        style={{
+          fontSize: "2.5rem",
+          fontWeight: "700",
+          textAlign: "center",
+          marginBottom: "3rem",
+          color: "#1a202c",
+          letterSpacing: "-0.5px"
+        }}
+        data-aos="fade-up"
       >
         ✨ Luxurious Room Types
-      </motion.h2>
+      </h2>
 
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: "2rem",
+        }}
       >
         {roomTypes.map((room, index) => (
-          <motion.div
+          <div
             key={index}
-            custom={index}
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="border border-gray-100 bg-gradient-to-br from-green-100 via-white to-blue-100 rounded-3xl shadow-lg p-6 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 backdrop-blur-sm group relative overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay={`${index * 100}`}
+            style={{
+              border: "1px solid #e2e8f0",
+              borderRadius: "1.5rem",
+              padding: "1.5rem",
+              background: "linear-gradient(to bottom right, #d1fae5, #ffffff, #bfdbfe)",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-8px) scale(1.03)";
+              e.currentTarget.style.boxShadow = "0 6px 16px rgba(0,0,0,0.15)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0) scale(1)";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0,0,0,0.08)";
+            }}
           >
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-br from-blue-200 via-green-200 to-transparent opacity-0 group-hover:opacity-60 transition duration-700 rounded-3xl z-0"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.3 }}
-            />
-            <div className="relative z-10">
-              <h3 className="text-2xl font-semibold text-[#2d3748] mb-3 group-hover:text-blue-700 transition duration-300">
-                {room.type}
-              </h3>
-              <p className="text-[#4a5568] mb-2 text-sm">{room.beds}</p>
-              <div className="flex items-center gap-2 text-[#718096] text-sm">
-                <Users className="w-4 h-4 text-blue-500" />
-                <span>{room.guests} guests</span>
-              </div>
+            <h3 style={{ fontSize: "1.5rem", fontWeight: "600", color: "#2d3748", marginBottom: "0.75rem" }}>{room.type}</h3>
+            <p style={{ color: "#4a5568", marginBottom: "0.5rem", fontSize: "0.95rem" }}>{room.beds}</p>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#4a5568", fontSize: "0.9rem" }}>
+              <Users style={{ width: "1rem", height: "1rem", color: "#3b82f6" }} />
+              <span>{room.guests} guests</span>
             </div>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
