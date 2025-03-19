@@ -54,7 +54,7 @@ const FAQComponent = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-[#f0fff4] to-[#d9fbe9] py-12 px-4 sm:px-8 md:px-16 lg:px-24 w-full">
+    <div className="bg-gradient-to-b from-[#f0fff4] to-[#d9fbe9]  px-4 sm:px-8 md:px-16 lg:px-24 w-full">
       <div className="text-center mb-12">
         <h1
           className="text-3xl sm:text-4xl font-bold text-green-900"
