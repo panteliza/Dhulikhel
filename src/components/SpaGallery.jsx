@@ -54,27 +54,31 @@ const SpaGallery = () => {
     <div className="p-6 bg-white min-h-screen">
       <h1 className="text-4xl font-bold text-center mb-10 animate-pulse">Our Spa Experience</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {spaPackages.map((spa, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.05 }}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-          >
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
-              <img
-                src={spa.src}
-                alt={spa.title}
-                className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2">{spa.title}</h2>
-                <p className="text-sm text-gray-700">{spa.description}</p>
+        {spaPackages.map((spa, index) => {
+          const isEven = index % 2 === 0;
+          return (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              initial={{ opacity: 0, x: isEven ? -60 : 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+            >
+              <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <img
+                  src={spa.src}
+                  alt={spa.title}
+                  className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
+                />
+                <div className="p-4">
+                  <h2 className="text-xl font-semibold mb-2">{spa.title}</h2>
+                  <p className="text-sm text-gray-700">{spa.description}</p>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          );
+        })}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Navbar from '../components/Navbar';
+
 import dhulikhelLocation from '../assets/map.png';
 
 const mapImageUrl =
@@ -40,12 +40,12 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
+    <div className="flex flex-col my-8">
+      
       <div className="flex-grow px-4 sm:px-8 max-w-3xl mx-auto text-center">
         <h1
           ref={headingRef}
-          className="text-[#2D4591] text-3xl sm:text-4xl font-semibold opacity-0 mt-10"
+          className="text-[#2D4591] text-3xl sm:text-4xl font-semibold opacity-0 mt-"
           style={{ animation: 'fadeInDown 1s ease-out forwards', animationPlayState: 'paused' }}
         >
           A Hidden Gem Awaits, Find Us Here
