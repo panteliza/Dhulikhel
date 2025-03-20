@@ -16,7 +16,10 @@ const ContactPage = () => {
   return (
     <div>
       <Navbar/>
-      <Contact className="mt-4"/>
+      <div className="mt-12"> {/* Increase margin-top value */}
+  <Contact />
+</div>
+
   <Reviews/>
     <DirectContactUs/>
       <Footer/>
